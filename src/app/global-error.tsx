@@ -1,6 +1,5 @@
 'use client';
 
-import * as Sentry from '@sentry/nextjs';
 import Error from 'next/error';
 import { useEffect } from 'react';
 
@@ -9,7 +8,8 @@ export default function GlobalError(props: {
   params: { locale: string };
 }) {
   useEffect(() => {
-    Sentry.captureException(props.error);
+    // eslint-disable-next-line no-console
+    console.error('GlobalError', props.error);
   }, [props.error]);
 
   return (
