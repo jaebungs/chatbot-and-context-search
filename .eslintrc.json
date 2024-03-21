@@ -25,7 +25,6 @@
         "simple-import-sort"
       ],
       "extends": [
-        "plugin:tailwindcss/recommended",
         "airbnb",
         "airbnb-typescript",
         "next/core-web-vitals",
@@ -39,7 +38,8 @@
           "error",
           {
             "singleQuote": true,
-            "endOfLine": "auto"
+            "endOfLine": "auto",
+            "semi": false
           }
         ], // Avoid conflict rule between Prettier and Airbnb Eslint
         "import/extensions": "off", // Avoid missing file extension errors, TypeScript already provides a similar feature
